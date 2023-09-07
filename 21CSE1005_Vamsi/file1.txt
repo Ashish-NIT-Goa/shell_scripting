@@ -1,0 +1,1 @@
+WRITING FILEs content of file1 which will be copied into file2
