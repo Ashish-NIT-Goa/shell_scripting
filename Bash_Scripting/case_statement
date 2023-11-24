@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+read -p "Enter value of x: " x
+
+case $x in
+	1)
+	echo "one";;
+	2)
+	echo "two";;
+	3)
+	echo "three";;
+	*)
+	echo "more than three";;
+esac

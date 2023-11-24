@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+# no ; like if statement
+for x in 1 2 3 4 5
+do
+	echo $x
+done
+
+# like python as range, bash has brace expansion
+for y in {1..11..2} # 11 is inclusive
+do
+	echo $y
+done
+
+# another way is like we do in C and C++
+for ((x=2;x<=12;x+=1))
+do
+	echo $x
+done

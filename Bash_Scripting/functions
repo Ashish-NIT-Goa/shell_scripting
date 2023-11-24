@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+
+my_func () {
+	echo "Hello function"
+	return 0
+}
+
+function my_func_2 {
+	echo "Hello function 2"
+	return 0
+}
+
+# calling function is just writing it's name
+my_func
+
+my_func_2
+
+# function with parameter
+# there is no argument passing in functions just use the parametets using $n
+my_para_fun () {
+	echo $1
+	echo $2
+	echo $#
+	echo $@
+	return 0
+}
+
+my_para_fun "1st" "2nd" "3rd"
+
+# function with return statement
+my_ret_func () {
+	h=$(echo "hello")
+	echo $h
+}
+
+hh=$(my_ret_func)
+
+echo $hh

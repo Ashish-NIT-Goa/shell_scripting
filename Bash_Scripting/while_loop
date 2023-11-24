@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+read -p "Enter value of x below 10: " x
+
+while [ $x -le 11 ]; do
+	echo $x
+	((x+=1))
+done
+	

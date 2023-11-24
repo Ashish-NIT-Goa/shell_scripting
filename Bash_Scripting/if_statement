@@ -1,0 +1,44 @@
+#!usr/bin/bash
+
+read -p "Enter value of x: " x
+
+# with numerics flags are used for comparison
+if [ $x -gt 5 ]; then
+	echo "x is greater than 5."
+elif [ $x -eq 4 ]; then
+	echo "x is equal to 4."
+else
+	echo "bye."
+fi
+
+# if you want to use arithmatic symbols use (()) rather than []
+if (($x > 5)); then
+	echo "x is greater than 5."
+elif (($x == 4)); then
+	echo "x is equal to 4."
+fi
+
+
+y="ashish"
+
+# for strings == is used
+if [ $y == "ashish" ]; then
+	echo "Ashish"
+else
+	echo "Not Ashish"
+fi
+
+# regular command-lines programs can be used in if statement without any enclosement
+# or rather put it as shell within a shell
+if $(grep -q hello sample.txt); then
+	echo "Hello exists."
+fi
+
+# using AND and OR
+if [ $x -gt 1 ] && [ $x -lt 10 ]; then 
+	echo "x is between 1 to 10"
+fi
+# or another way is 
+if [[ $x -gt 1 && $x -lt 10 ]]; then
+	echo "x is also between 1 and 10."
+fi
