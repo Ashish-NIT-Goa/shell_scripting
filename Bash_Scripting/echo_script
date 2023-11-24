@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+echo 'hello world'
+
+# this is a comment
+
+# don't know about mutliline comments
+

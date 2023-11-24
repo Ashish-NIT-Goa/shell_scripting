@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+
+# arrays can have both numeric and string elements together
+
+# declaring empty array
+declare -a empty_array
+echo $empty_array
+
+# declare and add elements
+filled_array=(1 2 3 4 5 6 7 8 9 10)
+# elements are space separated
+echo $filled_array
+# echo name of array will only print the first element
+# to get all elements use loop
+
+# to use array operations enclose the array name in {}
+
+# to get all elements use array[@]
+echo ${filled_array[@]}
+
+# to get length of array use #array[@]
+echo ${#filled_array[@]}
+
+# index array elements using []
+echo "2nd element of array is ${filled_array[1]}."
+
+# to chage values use same syntax as in Python
+filled_array[1]=99
+echo ${filled_array[@]}
+
+# slicing is like array[@]:N:M, N is starting index and M is number of elements to return
+echo ${filled_array[@]:3:4}
+
+# now appending to the empty array using array+=(element)
+empty_array=(100 101 102)
+echo ${empty_array[@]}
+

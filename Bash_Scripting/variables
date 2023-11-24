@@ -1,0 +1,34 @@
+#!/usr/bin/bash
+
+var1='Moon'
+
+echo $var1
+
+# single qoute means literally
+single_qoute_var='single'
+single_qoute_var_2='$var1'
+echo $single_qoute_var
+echo $single_qoute_var_2
+
+# in case of double qoutes it is interpreted literally, but when $ is used it will get it's value
+double_qoute_var="double"
+double_qoute_var_2="$var1"
+echo $double_qoute_var
+echo $double_qoute_var_2
+
+# is for running shell commands, it captures the STDOUT into the variable
+backtick_var=`pwd`
+echo $backtick_var
+# another way to put commonds to variable is $()
+command_var=$(pwd)
+echo $command_var
+
+# you can combine commands in double qoutes
+echo "Hello my name is $(whoami)."
+# or with backticks
+echo "Hello your name is `whoami`."
+
+# numeric variables
+x=5
+y=6.9
+echo "The sum of x and y is $(echo "$x + $y" | bc)"

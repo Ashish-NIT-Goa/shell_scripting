@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+# associative arrays are like dictionaries in python
+
+# empty associative array
+declare -A empty_ass
+
+# then fill key-value pairs
+empty_ass=([name]="Ashish" [age]="21" [year]=3)
+
+echo ${empty_ass[@]}
+
+# to get only one value select using key
+echo ${empty_ass[name]}
+
+# to declare and put elements in one go
+declare -A filled_ass=([name]="Singh" [age]=20 [year]=2)
+echo ${filled_ass[@]}
+
+# to get only the keys use !
+echo ${!filled_array[@]}
+
